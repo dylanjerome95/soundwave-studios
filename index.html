@@ -3,28 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Soundwave Studios</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<header>
+
     <nav>
-        <h1>🎙 Soundwave Studios</h1>
+
+        <div class="logo">
+            🎙 Soundwave Studios
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
     </nav>
 
-    <section class="hero">
-        <h2>Professional Recording • Mixing • Mastering</h2>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Professional Recording
+            <span>Mixing • Mastering</span>
+        </h1>
 
         <p>
-            Bringing your music to life with industry-quality sound.
+            Bringing your music to life with industry-quality sound for artists,
+            bands, podcasts, and businesses.
         </p>
 
-        <button>Book Your Session</button>
-    </section>
+        <a href="#contact" class="btn">
+            Book a Session
+        </a>
 
-<script src="js/script.js"></script>
+    </div>
 
+</section>
+
+
+<section id="services">
+
+    <h2>Our Services</h2>
+
+    <p class="section-subtitle">
+        Professional audio services for artists, creators, businesses, and podcasters.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🎙</div>
+
+            <h3>Recording</h3>
+
+            <p>
+                Professional vocal recording, instruments, podcasts,
+                and voice-over sessions in a comfortable studio environment.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🎚</div>
+
+            <h3>Mixing</h3>
+
+            <p>
+                Clean, balanced mixes with clarity, punch, depth,
+                and a polished commercial sound.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">💿</div>
+
+            <h3>Mastering</h3>
+
+            <p>
+                Final masters optimized for Spotify, Apple Music,
+                YouTube, radio, and every major streaming platform.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="portfolio">
+
+    <h2>Featured Work</h2>
+
+    <p class="section-subtitle">
+        Listen to some of our latest recordings, mixes, and mastering projects.
+    </p>
+
+    <div class="portfolio-grid">
+
+        <div class="project">
+            <img src="images/test-me-cover.jpg" alt="Test Me - Young Mac & Chaos cover art">
+            <div class="project-info">
+                <h3>Test Me</h3>
+                <p class="project-artist">Young Mac &amp; Chaos</p>
+                <p class="project-genre">Rap</p>
+                <p>Recorded, Mixed &amp; Mastered by Soundwave Studios</p>
+                <audio controls preload="none" src="audio/test-me.mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/dtoa-remix-cover.jpg" alt="From The D To The A (Remix) - Young Mac & Chaos cover art">
+            <div class="project-info">
+                <h3>From The D To The A (Remix)</h3>
+                <p class="project-artist">Young Mac &amp; Chaos</p>
+                <p class="project-genre">Rap</p>
+                <p>Recorded, Mixed &amp; Mastered by Soundwave Studios</p>
+                <audio controls preload="none" src="audio/dtoa-remix.mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/chasin-me-cover.jpg" alt="Chasin' Me - Chaos & Young Mac cover art">
+            <div class="project-info">
+                <h3>Chasin' Me</h3>
+                <p class="project-artist">Chaos &amp; Young Mac</p>
+                <p class="project-genre">Rap</p>
+                <p>Recorded, Mixed &amp; Mastered by Soundwave Studios</p>
+                <audio controls preload="none" src="audio/chasin-me.mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Pricing -->
+<section id="pricing">
+
+    <h2>Pricing</h2>
+    <p class="section-subtitle">
+        Professional recording, mixing, and mastering services tailored to your project.
+    </p>
+
+    <div class="pricing-grid">
+
+        <!-- Recording -->
+        <div class="pricing-card">
+            <h3>Recording</h3>
+            <p class="price">$50<span>/hour</span></p>
+            <ul class="pricing-features">
+                <li>Professional studio recording</li>
+                <li>High-quality microphones and equipment</li>
+                <li>Comfortable studio environment</li>
+            </ul>
+            <a href="#contact" class="btn-small">Book Now</a>
+        </div>
+
+        <!-- Mixing -->
+        <div class="pricing-card">
+            <h3>Mixing</h3>
+            <p class="price">$100<span>/song</span></p>
+            <ul class="pricing-features">
+                <li>Professional mix</li>
+                <li>Balanced vocals and instruments</li>
+                <li>Commercial-quality sound</li>
+            </ul>
+            <a href="#contact" class="btn-small">Book Now</a>
+        </div>
+
+        <!-- Mastering -->
+        <div class="pricing-card">
+            <h3>Mastering</h3>
+            <p class="price">$50<span>/song</span></p>
+            <ul class="pricing-features">
+                <li>Streaming-ready master</li>
+                <li>Loudness optimization</li>
+                <li>Final polish for all platforms</li>
+            </ul>
+            <a href="#contact" class="btn-small">Book Now</a>
+        </div>
+
+    </div>
+
+    <p class="pricing-note">Need a custom package? Contact us for a personalized quote.</p>
+
+</section>
+
+<section id="about">
+
+    <div class="about-content">
+        <h2>About Soundwave Studios</h2>
+        <p>
+            Soundwave Studios provides professional recording, mixing, and mastering
+            services for independent artists, bands, podcasters, and businesses.
+            Every project receives the same attention to detail, with a focus on
+            clean mixes, powerful masters, and helping clients achieve a professional
+            sound.
+        </p>
+    </div>
+
+</section> 
+<!-- Contact -->
+<section id="contact">
+
+    <h2>Get In Touch</h2>
+
+    <div class="contact-wrapper">
+
+        <!-- Left column: info -->
+        <div class="contact-info">
+
+            <p class="contact-intro">
+                Ready to bring your music to life? Whether you need recording,
+                mixing, mastering, podcast production, or have questions about
+                the studio, I'd love to hear about your project.
+            </p>
+
+            <div class="contact-card">
+                <span class="contact-icon">📍</span>
+                <div>
+                    <h3>Location</h3>
+                    <p>Sturgis, Michigan</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon">📞</span>
+                <div>
+                    <h3>Phone</h3>
+                    <p>(904) 274-3006</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon">✉️</span>
+                <div>
+                    <h3>Email</h3>
+                    <p>Soundwavestudios269@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon">🕒</span>
+                <div>
+                    <h3>Studio Hours</h3>
+                    <p>Monday–Saturday<br>10:00 AM – 9:00 PM<br>By Appointment</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right column: form -->
+        <div class="contact-form-wrapper">
+
+            <form class="contact-form">
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number (optional)</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                    <option value="recording">Recording</option>
+                    <option value="mixing">Mixing</option>
+                    <option value="mastering">Mastering</option>
+                    <option value="podcast">Podcast Production</option>
+                    <option value="beats">Beat Production</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+
+            </form>
+
+            <p class="contact-response-note">
+                Most inquiries receive a response within 24 hours.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <div class="footer-top">
+
+        <!-- Logo & tagline -->
+        <div class="footer-brand">
+            <h3>🎙 Soundwave Studios</h3>
+            <p>Professional recording, mixing &amp; mastering.</p>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact snippet -->
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Sturgis, Michigan</p>
+            <p>(904) 247-3006</p>
+            <p>Soundwavestudios269@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-left">
+            <img src="images/logo.png" alt="Soundwave Studios logo" class="footer-logo">
+            <p>&copy; 2026 Soundwave Studios. All rights reserved.</p>
+        </div>
+
+        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
+    
+
+    
+    
+
+</footer>
 </body>
-</html>
+    </html>
