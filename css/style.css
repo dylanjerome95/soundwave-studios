@@ -6,12 +6,14 @@
 
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden;
 }
 
 body{
     font-family:"Poppins",sans-serif;
     background:#090909;
     color:white;
+    overflow-x:hidden;
 }
 
 /* ==========================
@@ -65,22 +67,22 @@ nav{
 ========================== */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
 
     display:flex;
     justify-content:flex-end;
     align-items:center;
 
-    padding-right:10%;
+    padding:100px 10% 40px;
 
-   background:
-   linear-gradient(
-    to bottom,
-rgba(0,0,0,.45) 0%,
-rgba(0,0,0,.60) 60%,
-rgba(13,13,13,1) 100%
-),
-url("../images/cover.jpg");
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.45) 0%,
+            rgba(0,0,0,.60) 60%,
+            rgba(13,13,13,1) 100%
+        ),
+        url("../images/cover.jpg");
 
     background-size:cover;
     background-position:center;
@@ -116,17 +118,12 @@ url("../images/cover.jpg");
 
 .btn{
     display:inline-block;
-
     background:gold;
     color:black;
-
     padding:18px 55px;
-
     border-radius:50px;
-
     text-decoration:none;
     font-weight:700;
-
     transition:.3s;
 }
 
@@ -140,17 +137,25 @@ url("../images/cover.jpg");
 ========================== */
 
 #services{
-
-background:#0d0d0d;
+    background:#0d0d0d;
     padding:80px 9% 120px;
     margin-top:-60px;
     border-radius:40px 40px 0 0;
 }
 
-#services h2{
+#services h2,
+#portfolio h2,
+#pricing h2,
+#about h2,
+#contact h2{
     text-align:center;
-    font-size:3rem;
     color:gold;
+    font-size:3rem;
+}
+
+#services h2,
+#portfolio h2,
+#pricing h2{
     margin-bottom:15px;
 }
 
@@ -198,7 +203,6 @@ background:#0d0d0d;
     line-height:1.8;
 }
 
-
 /* ==========================
         PORTFOLIO
 ========================== */
@@ -206,13 +210,6 @@ background:#0d0d0d;
 #portfolio{
     background:#111;
     padding:120px 9%;
-}
-
-#portfolio h2{
-    text-align:center;
-    color:gold;
-    font-size:3rem;
-    margin-bottom:15px;
 }
 
 .portfolio-grid{
@@ -272,6 +269,7 @@ background:#0d0d0d;
 .btn-small:hover{
     transform:translateY(-3px);
 }
+
 .project-artist{
     color:#e6e6e6;
     font-weight:600;
@@ -288,10 +286,12 @@ background:#0d0d0d;
 
 .project-info audio{
     width:100%;
+    max-width:100%;
     margin-top:5px;
     filter:invert(85%) sepia(15%) saturate(400%) hue-rotate(-10deg) brightness(1.05);
     border-radius:30px;
 }
+
 /* ==========================
         PRICING
 ========================== */
@@ -299,13 +299,6 @@ background:#0d0d0d;
 #pricing{
     background:#111;
     padding:120px 9%;
-}
-
-#pricing h2{
-    text-align:center;
-    color:gold;
-    font-size:3rem;
-    margin-bottom:15px;
 }
 
 .pricing-grid{
@@ -322,6 +315,7 @@ background:#0d0d0d;
     padding:50px 35px;
     text-align:center;
     transition:.35s;
+
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -375,6 +369,7 @@ background:#0d0d0d;
     margin-top:60px;
     font-size:1rem;
 }
+
 /* ==========================
         ABOUT
 ========================== */
@@ -392,8 +387,6 @@ background:#0d0d0d;
 }
 
 #about h2{
-    color:gold;
-    font-size:3rem;
     margin-bottom:30px;
 }
 
@@ -402,6 +395,7 @@ background:#0d0d0d;
     font-size:1.15rem;
     line-height:1.9;
 }
+
 /* ==========================
         CONTACT
 ========================== */
@@ -412,9 +406,6 @@ background:#0d0d0d;
 }
 
 #contact h2{
-    text-align:center;
-    color:gold;
-    font-size:3rem;
     margin-bottom:70px;
 }
 
@@ -425,7 +416,6 @@ background:#0d0d0d;
     align-items:start;
 }
 
-/* Left column */
 .contact-intro{
     color:#d4d4d4;
     line-height:1.8;
@@ -467,12 +457,13 @@ background:#0d0d0d;
 .contact-card p{
     color:#d4d4d4;
     line-height:1.6;
+    overflow-wrap:anywhere;
 }
 
-/* Right column: form */
 .contact-form{
     display:flex;
     flex-direction:column;
+
     background:#171717;
     border:1px solid rgba(255,215,0,.18);
     border-radius:20px;
@@ -493,13 +484,17 @@ background:#0d0d0d;
 .contact-form input,
 .contact-form select,
 .contact-form textarea{
+    width:100%;
+
     background:#0d0d0d;
     border:1px solid rgba(255,255,255,.15);
     border-radius:10px;
     padding:14px 16px;
+
     color:#fff;
     font-size:1rem;
     font-family:inherit;
+
     transition:.3s;
 }
 
@@ -513,6 +508,7 @@ background:#0d0d0d;
 
 .contact-form textarea{
     resize:vertical;
+    min-height:130px;
 }
 
 .contact-form .btn{
@@ -529,6 +525,7 @@ background:#0d0d0d;
     margin-top:25px;
     font-size:.95rem;
 }
+
 /* ==========================
         FOOTER
 ========================== */
@@ -599,6 +596,7 @@ footer{
 .footer-contact p{
     color:#d4d4d4;
     line-height:1.8;
+    overflow-wrap:anywhere;
 }
 
 .footer-bottom{
@@ -610,9 +608,6 @@ footer{
     border-top:1px solid rgba(255,255,255,.08);
 }
 
-
-
-
 .footer-bottom-left{
     display:flex;
     flex-direction:column;
@@ -621,8 +616,9 @@ footer{
 }
 
 .footer-logo{
-    height: 64px;
+    height:64px;
     width:auto;
+    max-width:100%;
 }
 
 .footer-bottom p{
@@ -653,36 +649,40 @@ footer{
     transform:translateY(-5px);
     box-shadow:0 10px 25px rgba(255,215,0,.4);
 }
+
 /* ==========================
-      RESPONSIVE
+      TABLET / MOBILE
 ========================== */
 
 @media(max-width:900px){
 
     nav{
-
         flex-direction:column;
+        gap:14px;
+        padding:16px 20px;
+    }
 
-        gap:20px;
-
-        padding:20px;
+    .logo{
+        font-size:25px;
     }
 
     .nav-links{
-
+        gap:16px 22px;
         flex-wrap:wrap;
-
         justify-content:center;
     }
 
+    .nav-links a{
+        font-size:.92rem;
+    }
+
     .hero{
+        min-height:100svh;
 
         justify-content:center;
-
         text-align:center;
 
-        padding:40px;
-        padding-top:180px;
+        padding:170px 30px 70px;
 
         background:
             linear-gradient(
@@ -694,119 +694,247 @@ footer{
             url("../images/cover.jpg");
     }
 
-    .hero{
-
-        justify-content:center;
-
-        text-align:center;
-
-        padding:40px;
-        padding-top:180px;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(0,0,0,.75) 0%,
-                rgba(0,0,0,.85) 60%,
-                rgba(13,13,13,1) 100%
-            ),
-            url("../images/cover.jpg");
-    }
-
-    .hero{
-
-        justify-content:center;
-
-        text-align:center;
-
-        padding:40px;
-        padding-top:180px;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(0,0,0,.75) 0%,
-                rgba(0,0,0,.85) 60%,
-                rgba(13,13,13,1) 100%
-            ),
-            url("../images/cover.jpg");
-    }
-
-    .hero{
-
-        justify-content:center;
-
-        text-align:center;
-
-        padding:40px;
-        padding-top:180px;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(0,0,0,.75) 0%,
-                rgba(0,0,0,.85) 60%,
-                rgba(13,13,13,1) 100%
-            ),
-            url("../images/cover.jpg");
-    }
-    .hero{
-
-        justify-content:center;
-
-        text-align:center;
-
-        padding:40px;
-        padding-top:180px;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(0,0,0,.75) 0%,
-                rgba(0,0,0,.85) 60%,
-                rgba(13,13,13,1) 100%
-            ),
-            url("../images/cover.jpg");
-    }
-    .hero{
-
-        justify-content:center;
-
-        text-align:center;
-
-        padding:40px;
-        padding-top:180px;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(0,0,0,.75) 0%,
-                rgba(0,0,0,.85) 60%,
-                rgba(13,13,13,1) 100%
-            ),
-            url("../images/cover.jpg");
+    .hero-content{
+        max-width:700px;
+        margin-top:0;
     }
 
     .hero h1{
-
         font-size:3rem;
     }
 
     .hero h1 span{
-
         font-size:2rem;
     }
 
     .cards,
+    .portfolio-grid,
+    .pricing-grid,
     .contact-wrapper,
     .footer-top{
-
         grid-template-columns:1fr;
+    }
+
+    #services{
+        padding:70px 6% 90px;
+        margin-top:-30px;
+    }
+
+    #portfolio,
+    #pricing,
+    #about,
+    #contact{
+        padding:90px 6%;
+    }
+
+    .portfolio-grid,
+    .pricing-grid{
+        gap:25px;
+    }
+
+    .project img{
+        height:auto;
+        aspect-ratio:16/10;
+    }
+
+    .contact-form{
+        padding:30px;
+    }
+
+    .footer-top{
+        gap:35px;
     }
 
     .footer-bottom{
         flex-direction:column;
         gap:20px;
         text-align:center;
+    }
+}
+
+/* ==========================
+      PHONE
+========================== */
+
+@media(max-width:600px){
+
+    nav{
+        padding:13px 12px;
+        gap:10px;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .nav-links{
+        gap:8px 14px;
+    }
+
+    .nav-links a{
+        font-size:.78rem;
+    }
+
+    .hero{
+        padding:145px 20px 55px;
+    }
+
+    .hero h1{
+        font-size:2.25rem;
+        line-height:1.08;
+        margin-bottom:18px;
+    }
+
+    .hero h1 span{
+        font-size:1.45rem;
+        margin-top:7px;
+    }
+
+    .hero p{
+        font-size:.98rem;
+        line-height:1.6;
+        margin-bottom:28px;
+    }
+
+    .btn{
+        padding:15px 30px;
+    }
+
+    #services,
+    #portfolio,
+    #pricing,
+    #about,
+    #contact{
+        padding:70px 18px;
+    }
+
+    #services{
+        margin-top:-20px;
+        border-radius:25px 25px 0 0;
+    }
+
+    #services h2,
+    #portfolio h2,
+    #pricing h2,
+    #about h2,
+    #contact h2{
+        font-size:2rem;
+    }
+
+    .section-subtitle{
+        font-size:.95rem;
+        margin-bottom:40px;
+    }
+
+    .cards,
+    .portfolio-grid,
+    .pricing-grid{
+        gap:22px;
+        margin-top:40px;
+    }
+
+    .card,
+    .pricing-card{
+        padding:35px 22px;
+    }
+
+    .project-info{
+        padding:20px;
+    }
+
+    .project img{
+        aspect-ratio:1/1;
+    }
+
+    .project-info audio{
+        width:100%;
+        height:40px;
+    }
+
+    .contact-wrapper{
+        gap:30px;
+    }
+
+    .contact-intro{
+        font-size:1rem;
+        margin-bottom:25px;
+    }
+
+    .contact-card{
+        padding:20px;
+        gap:14px;
+    }
+
+    .contact-form{
+        padding:24px 18px;
+    }
+
+    .contact-form .btn{
+        width:100%;
+    }
+
+    footer{
+        padding:60px 18px 25px;
+    }
+
+    .footer-top{
+        gap:30px;
+    }
+
+    .footer-bottom{
+        gap:25px;
+    }
+
+    .footer-bottom-left{
+        align-items:center;
+        text-align:center;
+    }
+
+    .footer-logo{
+        height:52px;
+    }
+}
+
+/* ==========================
+      SMALL PHONES
+========================== */
+
+@media(max-width:380px){
+
+    .logo{
+        font-size:20px;
+    }
+
+    .nav-links{
+        gap:7px 10px;
+    }
+
+    .nav-links a{
+        font-size:.72rem;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero h1 span{
+        font-size:1.3rem;
+    }
+
+    #services h2,
+    #portfolio h2,
+    #pricing h2,
+    #about h2,
+    #contact h2{
+        font-size:1.8rem;
+    }
+
+    #services,
+    #portfolio,
+    #pricing,
+    #about,
+    #contact{
+        padding-left:14px;
+        padding-right:14px;
     }
 }
